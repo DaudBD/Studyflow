@@ -2,7 +2,7 @@ import { LuNotebookPen } from "react-icons/lu";
 const Header = () => {
   return (
     <header className="bg-[#F1F2EB]">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 ">
         {/* Logo */}
         <a
           href="#"
@@ -13,7 +13,7 @@ const Header = () => {
         </a>
 
         {/* Navigation */}
-        <ul className="hidden items-center gap-7 text-[#64748B] md:flex">
+        <ul className="hidden items-center gap-7 text-[#64748B] md:flex font-semibold">
           <li>
             <a href="#features" className="transition hover:text-[#2563EB]">
               Features
