@@ -1,18 +1,10 @@
 import { LuListTodo, LuZap } from "react-icons/lu";
 import { GoGoal } from "react-icons/go";
+import SectionHeader from "./Shared/SectionHeader";
 const Studing = () => {
   return (
     <section className="container max-w-6xl mx-auto px-5 py-20">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
-          Studying without a system is exhausting
-        </h2>
-
-        <p className="mt-4 text-lg leading-8 text-gray-600 md:text-xl">
-          You're not lacking discipline. You're lacking a place where your goals
-          turn into today's tasks.
-        </p>
-      </div>
+      <SectionHeader />
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
         {/* Goals */}
         <div className="rounded-2xl border border-gray-200 bg-white p-6">
