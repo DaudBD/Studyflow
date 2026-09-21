@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@plugin "daisyui";
+body {
+  background-color: #f8f9f5;
+  background-image:
+    linear-gradient(to right, #dfe2d8 1px, transparent 1px),
+    linear-gradient(to bottom, #dfe2d8 1px, transparent 1px);
+  background-size: 33px 33px;
+}
