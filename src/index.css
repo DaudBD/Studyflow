@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 @import "tailwindcss";
+
 @plugin "daisyui";
+
 body {
   background-color: #f8f9f5;
+
+  font-family: "Bricolage Grotesque", sans-serif;
+
   background-image:
     linear-gradient(to right, #dfe2d8 1px, transparent 1px),
     linear-gradient(to bottom, #dfe2d8 1px, transparent 1px);
+
   background-size: 33px 33px;
 }
