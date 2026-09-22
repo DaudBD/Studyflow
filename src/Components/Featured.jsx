@@ -12,13 +12,13 @@ import FeaturedCard from "../Shared/FeaturedCard";
 
 const Featured = () => {
   return (
-    <section className="container mx-auto max-w-6xl px-5 py-20">
+    <section id="features" className="container mx-auto max-w-6xl px-5 py-20">
       <SectionHeader
         title="Everything a study session needs"
         subTitle="Nothing you don't need, nothing you have to configure for an hour first."
       />
 
-      <div className="mt-12 grid grid-cols-3 gap-8 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
         <FeaturedCard
           icon={<LuListTodo className="mb-5 text-3xl text-[#2563EB]" />}
           title="Daily task breakdown"

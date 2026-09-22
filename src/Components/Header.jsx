@@ -5,11 +5,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-[#F1F2EB]/95 backdrop-blur-md">
+    <header id="top" className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-[#F1F2EB]/95 backdrop-blur-md">
       <nav className="mx-auto flex min-h-16 max-w-6xl items-center justify-between px-4 py-3 sm:px-5">
         {/* Logo */}
         <a
-          href="#"
+          href="#top"
           className="flex shrink-0 items-center gap-2 text-xl font-bold text-[#2563EB] sm:text-2xl"
         >
           <LuNotebookPen className="h-6 w-6 sm:h-7 sm:w-7" />

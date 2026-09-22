@@ -21,7 +21,7 @@ const AiDayPlanning = () => {
 
             <p className="mt-6 max-w-xl text-base leading-7 text-gray-300 md:text-lg">
               One click on "Plan my day" turns your open tasks into a simple,
-              realistic schedule — so the hardest part, starting, is already
+              realistic schedule, so the hardest part, starting, is already
               done for you.
             </p>
           </div>
@@ -35,19 +35,19 @@ const AiDayPlanning = () => {
             <ul className="space-y-4">
               <li className="rounded-lg bg-[#263A35] px-4 py-3 text-sm text-gray-200">
                 <span className="font-semibold text-white">9:00 - 9:45</span>
-                <span className="mx-2 text-gray-500">•</span>
+                <span className="mx-2 text-gray-500">&#8226;</span>
                 Deep work on your hardest task
               </li>
 
               <li className="rounded-lg bg-[#263A35] px-4 py-3 text-sm text-gray-200">
                 <span className="font-semibold text-white">10:00 - 10:45</span>
-                <span className="mx-2 text-gray-500">•</span>
+                <span className="mx-2 text-gray-500">&#8226;</span>
                 Next task, same subject
               </li>
 
               <li className="rounded-lg bg-[#263A35] px-4 py-3 text-sm text-gray-200">
                 <span className="font-semibold text-white">11:00 - 11:30</span>
-                <span className="mx-2 text-gray-500">•</span>
+                <span className="mx-2 text-gray-500">&#8226;</span>
                 Quick review and recall
               </li>
             </ul>

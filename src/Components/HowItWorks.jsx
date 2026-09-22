@@ -18,7 +18,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="container mx-auto max-w-6xl px-5 py-20">
+    <section id="how-it-works" className="container mx-auto max-w-6xl px-5 py-20">
       <SectionHeader title="How it works" />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">

@@ -17,15 +17,15 @@ const Banner = () => {
       </p>
 
       <div className="mt-8 flex justify-center gap-3 mb-4">
-        <button className="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700">
+        <a href="#pricing" className="rounded-lg bg-[#2563EB] px-6 py-3 font-medium text-white transition hover:bg-[#1D4ED8]">
           Start For Free
-        </button>
+        </a>
 
-        <button className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 transition hover:bg-gray-50">
+        <a href="#how-it-works" className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 transition hover:bg-gray-50">
           See How It Works
-        </button>
+        </a>
       </div>
-      <div className="card mx-auto w-96 bg-base-100 shadow-sm">
+      <div className="card mx-auto w-full max-w-96 bg-base-100 text-left shadow-sm">
         <div className="card-body">
           {/* Header */}
           <h2 className="flex items-center justify-between text-lg font-medium">
