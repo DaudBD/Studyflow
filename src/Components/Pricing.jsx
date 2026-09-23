@@ -1,4 +1,5 @@
 import SectionHeader from "../Shared/SectionHeader";
+import { Link } from "react-router";
 
 const Pricing = () => {
   const plans = [
@@ -77,15 +78,15 @@ const Pricing = () => {
         ))}
       </ul>
 
-      <button
-        className={`mt-8 w-full rounded-[14px] py-3 text-[16px] font-semibold ${
+      <Link to="/sign-up"
+        className={`mt-8 flex w-full items-center justify-center rounded-[14px] py-3 text-center text-[16px] font-semibold ${
           plan.pricingType === "Pro"
             ? "bg-[#2563EB] text-white"
             : "border border-[#D9DDD2] bg-white text-[#111111]"
         }`}
       >
         Get started
-      </button>
+      </Link>
     </div>
   ))}
       </div>

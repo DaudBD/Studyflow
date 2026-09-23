@@ -1,21 +1,31 @@
 import { LuNotebookPen } from "react-icons/lu";
+import { Link } from "react-router";
 
 const footerGroups = [
   {
     title: "Product",
     links: [
-      { label: "Features", href: "#features" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Features", href: "/features" },
+      { label: "How it works", href: "/how-it-works" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
     title: "Company",
-    links: ["About", "Blog", "Careers"],
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Blog", href: "/blog" },
+      { label: "Careers", href: "/careers" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Help center", "Study tips", "Contact"],
+    links: [
+      { label: "Help center", href: "/help-center" },
+      { label: "Study tips", href: "/study-tips" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
 ];
 
@@ -25,8 +35,8 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
           <div>
-            <a
-              href="#top"
+            <Link
+              to="/"
               className="inline-flex items-center gap-2 text-xl font-bold text-[#071E2B]"
             >
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#2563EB] text-white">
@@ -35,7 +45,7 @@ const Footer = () => {
               <span>
                 Study<span className="text-[#2563EB]">Flow</span>
               </span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs leading-6 text-[#64748B]">
               A study dashboard for turning goals into daily progress.
             </p>
@@ -47,16 +57,12 @@ const Footer = () => {
               <ul className="mt-4 space-y-3">
                 {group.links.map((link) => (
                   <li key={typeof link === "string" ? link : link.label}>
-                    {typeof link === "string" ? (
-                      <span className="text-[#64748B]">{link}</span>
-                    ) : (
-                      <a
-                        href={link.href}
+                    <Link
+                        to={link.href}
                         className="text-[#64748B] transition-colors hover:text-[#2563EB]"
                       >
                         {link.label}
-                      </a>
-                    )}
+                    </Link>
                   </li>
                 ))}
               </ul>

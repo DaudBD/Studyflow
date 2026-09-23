@@ -9,41 +9,41 @@ const Header = () => {
     <header id="top" className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-[#F1F2EB]/95 backdrop-blur-md">
       <nav className="mx-auto flex min-h-16 max-w-6xl items-center justify-between px-4 py-3 sm:px-5">
         {/* Logo */}
-        <a
-          href="#top"
+        <Link
+          to="/"
           className="flex shrink-0 items-center gap-2 text-xl font-bold text-[#2563EB] sm:text-2xl"
         >
           <LuNotebookPen className="h-6 w-6 sm:h-7 sm:w-7" />
           <span>StudyFlow</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden items-center gap-6 font-semibold text-[#64748B] md:flex lg:gap-8">
           <li>
-            <a
-              href="#features"
+            <Link
+              to="/features"
               className="transition-colors hover:text-[#2563EB]"
             >
               Features
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              href="#how-it-works"
+            <Link
+              to="/how-it-works"
               className="transition-colors hover:text-[#2563EB]"
             >
               How It Works
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              href="#pricing"
+            <Link
+              to="/pricing"
               className="transition-colors hover:text-[#2563EB]"
             >
               Pricing
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -53,9 +53,9 @@ const Header = () => {
             Login
           </Link>
 
-          <button className="rounded-md bg-[#2563EB] px-4 py-2 font-semibold text-white transition hover:bg-[#1D4ED8] lg:px-5">
+          <Link to="/sign-up" className="rounded-md bg-[#2563EB] px-4 py-2 font-semibold text-white transition hover:bg-[#1D4ED8] lg:px-5">
             Get Started
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,33 +78,33 @@ const Header = () => {
         <div className="border-t border-[#E5E7EB] bg-[#F1F2EB] px-4 py-4 md:hidden">
           <ul className="flex flex-col gap-1 font-semibold text-[#64748B]">
             <li>
-              <a
-                href="#features"
+              <Link
+                to="/features"
                 onClick={() => setMenuOpen(false)}
                 className="block rounded-md px-3 py-3 hover:bg-white hover:text-[#2563EB]"
               >
                 Features
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#how-it-works"
+              <Link
+                to="/how-it-works"
                 onClick={() => setMenuOpen(false)}
                 className="block rounded-md px-3 py-3 hover:bg-white hover:text-[#2563EB]"
               >
                 How It Works
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#pricing"
+              <Link
+                to="/pricing"
                 onClick={() => setMenuOpen(false)}
                 className="block rounded-md px-3 py-3 hover:bg-white hover:text-[#2563EB]"
               >
                 Pricing
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -114,9 +114,9 @@ const Header = () => {
               Login
             </Link>
 
-            <button className="flex-1 rounded-md bg-[#2563EB] px-4 py-2 font-semibold text-white hover:bg-[#1D4ED8]">
+            <Link to="/sign-up" onClick={() => setMenuOpen(false)} className="flex-1 rounded-md bg-[#2563EB] px-4 py-2 text-center font-semibold text-white hover:bg-[#1D4ED8]">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       )}
