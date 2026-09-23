@@ -11,7 +11,12 @@ import NotFound from './notfound/NotFound.jsx';
 import Login from './signin/Login.jsx';
 import Signup from './pages/signup/Sign-Up.jsx';
 import Pricing from './Components/Pricing.jsx';
-import InfoPage from './pages/InfoPage.jsx';
+import About from './pages/about.jsx';
+import Blog from './pages/blog.jsx';
+import Careers from './pages/careers.jsx';
+import HelpCenter from './pages/help-center.jsx';
+import StudyTips from './pages/study-tips.jsx';
+import Contact from './pages/contact.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,12 +37,12 @@ const router = createBrowserRouter([
         element: <HowItWorks />,
       },
       { path: "pricing", element: <Pricing /> },
-      { path: "about", element: <InfoPage title="About StudyFlow" description="StudyFlow helps students turn big academic goals into focused daily actions, track their progress, and build a study routine that lasts." /> },
-      { path: "blog", element: <InfoPage title="StudyFlow Blog" description="Ideas and practical guidance for better study habits, thoughtful planning, and steady academic progress." /> },
-      { path: "careers", element: <InfoPage title="Careers" description="We are building tools that make studying feel clearer and more manageable. Check back for future opportunities to join the StudyFlow team." /> },
-      { path: "help-center", element: <InfoPage title="Help Center" description="Need help getting started? Create an account, set a study goal, and break it into daily tasks. For further assistance, contact our team." /> },
-      { path: "study-tips", element: <InfoPage title="Study Tips" description="Plan a small set of achievable tasks, study in focused blocks, take short breaks, and review your progress at the end of each day." /> },
-      { path: "contact", element: <InfoPage title="Contact StudyFlow" description="Questions or feedback? Send a note to leodaudbd@gmail.com and tell us how we can help." /> },
+      { path: "about", element: <About /> },
+      { path: "blog", element: <Blog /> },
+      { path: "careers", element: <Careers /> },
+      { path: "help-center", element: <HelpCenter /> },
+      { path: "study-tips", element: <StudyTips /> },
+      { path: "contact", element: <Contact /> },
       {
         path: "sign-in",
         element: <Login />,
