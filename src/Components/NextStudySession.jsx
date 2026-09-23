@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const NextStudySession = () => {
   return (
     <section className="container mx-auto rounded-[20px] border border-[#D9DDD2] bg-white px-5 py-10 text-center">
@@ -10,10 +12,10 @@ const NextStudySession = () => {
           Set your first goal in under two minutes. No credit card required.
         </p>
 
-        <button className="mt-6 inline-flex items-center gap-3 rounded-[14px] bg-[#2563EB] px-7 py-4 text-[18px] font-semibold text-white hover:bg-[#1D4ED8]">
+        <Link to="/sign-in" className="mt-6 inline-flex items-center gap-3 rounded-[14px] bg-[#2563EB] px-7 py-4 text-[18px] font-semibold text-white hover:bg-[#1D4ED8]">
           Start for free
           <span>→</span>
-        </button>
+        </Link>
       </div>
     </section>
   );

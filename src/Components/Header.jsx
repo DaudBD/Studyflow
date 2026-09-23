@@ -1,9 +1,28 @@
-import { LuNotebookPen, LuMenu, LuX } from "react-icons/lu";
-import { useState } from "react";
+import { LuNotebookPen, LuMenu, LuMoon, LuSun, LuX } from "react-icons/lu";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("studyflow-theme") === "dark");
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    document.documentElement.dataset.theme = darkMode ? "dark" : "light";
+    localStorage.setItem("studyflow-theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
+  const themeToggle = (
+    <button
+      type="button"
+      onClick={() => setDarkMode((current) => !current)}
+      className="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-[#CBD5E1] text-[#475569] transition hover:bg-[#E5E7EB]"
+      aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
+      title={`Switch to ${darkMode ? "light" : "dark"} mode`}
+    >
+      {darkMode ? <LuSun className="h-5 w-5" /> : <LuMoon className="h-5 w-5" />}
+    </button>
+  );
 
   return (
     <header id="top" className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-[#F1F2EB]/95 backdrop-blur-md">
@@ -49,6 +68,7 @@ const Header = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden items-center gap-2 md:flex">
+          {themeToggle}
           <Link to="/sign-in" className="rounded-md px-3 py-2 font-semibold text-[#475569] transition hover:text-[#2563EB] lg:px-4">
             Login
           </Link>
@@ -110,11 +130,12 @@ const Header = () => {
 
           {/* Mobile Buttons */}
           <div className="mt-3 flex gap-2 border-t border-[#E5E7EB] pt-4">
+            {themeToggle}
             <Link to="/sign-in" className="flex-1 rounded-md px-4 py-2 text-center font-semibold text-[#475569] hover:bg-white">
               Login
             </Link>
 
-            <Link to="/sign-up" onClick={() => setMenuOpen(false)} className="flex-1 rounded-md bg-[#2563EB] px-4 py-2 text-center font-semibold text-white hover:bg-[#1D4ED8]">
+            <Link to="/sign-up" onClick={() => setMenuOpen(false)} className="flex-1 rounded-md bg-[#2563EB] px-4 py-2 text-center font-semibold text-white transition hover:bg-[#1D4ED8]">
               Get Started
             </Link>
           </div>
